@@ -12,3 +12,5 @@ obj
 .swp
 .vscode
 *.log
+*.csproj
+*.csproj.user
