@@ -1,0 +1,14 @@
+dist
+build
+node_modules
+typings
+
+docs
+bin
+obj
+
+.tmp
+.idea
+.swp
+.vscode
+*.log
