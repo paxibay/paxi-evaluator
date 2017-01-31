@@ -13,17 +13,14 @@
     "deploy": "copyup dist/* ../server/build/public"
   },
   "dependencies": {
-    "core-js": "^2.4.0",
-    "jquery": "^2.2.2",
-    "reflect-metadata": "^0.1.8",
-    "rxjs": "^5.0.3",
-    "systemjs": "0.19.37",
-    "zone.js": "^0.7.6",
+    "@types/whatwg-fetch": "0.0.33",
     "Select": "0.0.1",
     "babel-cli": "^6.18.0",
     "bootstrap": "^3.3.7",
     "classnames": "^2.2.5",
+    "core-js": "^2.4.0",
     "immutable": "^3.8.1",
+    "jquery": "^2.2.2",
     "lodash": "^4.17.4",
     "mongoose": "^4.7.7",
     "rc-input-number": "^3.0.0",
@@ -40,7 +37,12 @@
     "redux": "^3.6.0",
     "redux-actions": "^1.2.0",
     "redux-devtools-extension": "^1.0.0",
-    "todomvc-app-css": "^2.0.6"
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "^5.0.3",
+    "systemjs": "0.19.37",
+    "todomvc-app-css": "^2.0.6",
+    "whatwg-fetch": "^2.0.2",
+    "zone.js": "^0.7.6"
   },
   "devDependencies": {
     "@types/es6-shim": "0.0.31",
@@ -69,7 +71,6 @@
     "url-loader": "^0.5.7",
     "webpack": "2.1.0-beta.25",
     "webpack-dev-server": "2.1.0-beta.6",
-
     "@types/chai": "^3.4.34",
     "@types/classnames": "0.0.32",
     "@types/lodash": "^4.14.46",

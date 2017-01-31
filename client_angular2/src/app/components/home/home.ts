@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable'
 import { Product, ProductService, Location } from '../../services/product-service';
 
-import 'es6-promise';
-import 'isomorphic-fetch';
-
 let LocationAPI = {
 
   getLocationById() {
@@ -33,7 +30,6 @@ let LocationAPI = {
 export default class HomeComponent {
   products: Observable<Product[]>;
   location: Location;
-
 
   constructor(private productService: ProductService) {
     this.products = this.productService.getProducts();
