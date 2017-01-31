@@ -14,6 +14,18 @@ export class Product {
   }
 }
 
+export class Location {
+  constructor(
+    public name: string,
+    public address: string,
+    public rating: number,
+    public facilities: Array<string>,
+    public coords: Array<number>,
+    public openingTimes: Array<{}>,
+    public reviews: Array<{}>){
+  }
+}
+
 export class Review {
   constructor(
     public id: number,
@@ -45,6 +57,16 @@ export class ProductService {
 
   getProducts(): Observable<Product[]> {
     return this.http.get('/api/products')
+      .map(response => response.json());
+  }
+
+  getLocations(): Observable<Location[]> {
+    return this.http.get('/api/locations')
+      .map(response => response.json());
+  }
+
+  getLocationById(): Observable<Location> {
+    return this.http.get('/api/locations/' + '56c8dd0bdafe64443c11898f')
       .map(response => response.json());
   }
 

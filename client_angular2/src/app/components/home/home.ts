@@ -1,6 +1,17 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable'
-import { Product, ProductService } from '../../services/product-service';
+import { Product, ProductService, Location } from '../../services/product-service';
+
+import 'es6-promise';
+import 'isomorphic-fetch';
+
+let LocationAPI = {
+
+  getLocationById() {
+    return fetch('/locations/' + '56c8dd0bdafe64443c11898f')
+      .then((response) => response.json());
+  }
+};
 
 @Component({
   selector: 'auction-home-page',
@@ -20,9 +31,14 @@ import { Product, ProductService } from '../../services/product-service';
 })
 export default class HomeComponent {
   products: Observable<Product[]>;
+  location: Observable<Location>;
+
 
   constructor(private productService: ProductService) {
     this.products = this.productService.getProducts();
+
+    this.productService.getLocationById().subscribe((value) => console.log(value));
+    console.log(this.location);
 
     this.productService.searchEvent
       .subscribe(

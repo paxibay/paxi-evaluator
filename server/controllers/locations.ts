@@ -90,7 +90,7 @@ module.exports.locationsReadOne = function(req, res) {
           sendJSONresponse(res, 404, err);
           return;
         }
-        console.log(location);
+        console.log('success!!!! ', location);
         sendJSONresponse(res, 200, location);
       });
   } else {
