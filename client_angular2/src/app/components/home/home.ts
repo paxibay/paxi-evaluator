@@ -25,20 +25,19 @@ let LocationAPI = {
     <div class="row">
       <div *ngFor="let product of products | async" class="col-sm-4 col-lg-4 col-md-4">
         <auction-product-item [product]="product"></auction-product-item>
+        <div>{{location.name}}</div>
       </div>
     </div>
   `
 })
 export default class HomeComponent {
   products: Observable<Product[]>;
-  location: Observable<Location>;
+  location: Location;
 
 
   constructor(private productService: ProductService) {
     this.products = this.productService.getProducts();
-
-    this.productService.getLocationById().subscribe((value) => console.log(value));
-    console.log(this.location);
+    this.productService.getLocationById().subscribe(value => this.location = value);
 
     this.productService.searchEvent
       .subscribe(
