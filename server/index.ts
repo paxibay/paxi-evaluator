@@ -5,8 +5,8 @@ import {Server as HttpServer} from 'http';
 import {Server as WsServer} from 'ws';
 import {Product, Review, getProducts, getProductById, getReviewsByProductId} from './model';
 
-require('./models/db');
-var routesApi = require('./routes/index');
+require('./api/models/db');
+var routesApi = require('./api/routes/index');
 
 
 // HTTP API
