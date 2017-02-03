@@ -22,11 +22,11 @@ class MainContent extends React.Component<MainContentProps, MainContentState> {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      projectsDetails: () => {
-        return (
-          <Tab></Tab>
-        )
-      }
+      //projectsDetails: () => {
+      //  return (
+      //    <Tab></Tab>
+      //  )
+      //}
     };
   }
 

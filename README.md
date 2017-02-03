@@ -17,11 +17,6 @@ Angular2:
 	3. npm run start
 	4. http://localhost:3000
 
-	client production mode:
-	1. change to the client_angular2 directory
-	2. npm install
-	3. npm run deploy
-
 React:
 	client development mode:
 	1. change to the client_react directory
@@ -29,7 +24,13 @@ React:
 	3. npm run start
 	4. http://localhost:4000
 
-	client production mode:
-	1. change to the client_react directory
-	2. npm install
-	3. npm run deploy
+	Main techiques used with React project:
+	React+Recux 
+	TypeScript
+	react-bootstrap
+	bootstrap
+	redux-actions
+	webpack
+	immutableJs
+	scss
+	
