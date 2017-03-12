@@ -14,7 +14,8 @@ interface MainContentProps {
 };
 
 interface MainContentState {
-  projectsDetails?: {};
+    projectsDetails?: {};
+    searchTerm: string;
 };
 
 class MainContent extends React.Component<MainContentProps, MainContentState> {
@@ -27,6 +28,7 @@ class MainContent extends React.Component<MainContentProps, MainContentState> {
       //    <Tab></Tab>
       //  )
       //}
+        searchTerm: "React asd"
     };
   }
 
@@ -34,6 +36,11 @@ class MainContent extends React.Component<MainContentProps, MainContentState> {
   }
   componentDidUpdate() {
   }
+
+  handleChange(event) {
+      this.setState({ searchTerm: event.target.value });
+  }
+
 
   handleSubmit(e) {
     const { settings } = this.props;
@@ -76,12 +83,19 @@ class MainContent extends React.Component<MainContentProps, MainContentState> {
         <div className="side-panel-container">
           <span>
             <Button bsStyle="primary">
-              Add
+              Add see it now
             </Button>
             <Button bsStyle="primary">
               Update
             </Button>
+            <div>
+              Search Term: <input type="search" value={this.state.searchTerm}
+                onChange={this.handleChange.bind(this)}
+                />
+            </div>
+
           </span>
+
           <br /><br />
           <div>
             <form>

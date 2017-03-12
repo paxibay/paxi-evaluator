@@ -3,8 +3,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 
-import { Product, Review, ProductService } from '../../services/product-service';
-import { BidService } from '../../services/bid-service';
+import { Product, Review, ProductService } from '../../../../services/product-service';
+import { BidService } from '../../../../services/bid-service';
 
 @Component({
   selector: 'auction-product-page',

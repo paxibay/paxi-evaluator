@@ -2,6 +2,10 @@ import { assign } from 'lodash';
 import { handleActions, Action } from 'redux-actions';
 import * as Immutable from 'immutable';
 
+//export = React.__Addons.update;
+//export default React.__Addons.update;
+import  update  from 'react-addons-update';
+
 // Three thins first: reference model, actions, and init IState
 import { Project, Settings, IState } from './model';
 import {
@@ -14,14 +18,13 @@ const initialState: IState = {
   projects: [{ key: 1, code: "01", title: "Project01" }, { key: 2, code: "02", title: "Project02" }]
 };
 
-
 export default handleActions<IState>({
   [ADD_PROJECT]: (state: IState, action: Action<Project>): IState => {
     const updateProjects = state.projects.concat(action.payload);
     const preState = Immutable.fromJS(state);
     const updatedState = preState.setIn(['projects'], updateProjects).toJS();
     console.log(updatedState);
-
+    
     return updatedState;
   },
 
