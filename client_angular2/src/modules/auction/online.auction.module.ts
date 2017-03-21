@@ -29,27 +29,27 @@ export const DECLARATIONS = [
 ];
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot([
-      {path: '',                    component: HomeComponent},
-      {path: 'products/:productId', component: ProductDetailComponent}
-    ])
-  ],
-  declarations: [...DECLARATIONS],
-  providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
-    ...ONLINE_AUCTION_SERVICES
-  ],
-  bootstrap: [ ApplicationComponent ]
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        ReactiveFormsModule,
+        RouterModule.forRoot([
+            { path: '', component: HomeComponent },
+            { path: 'products/:productId', component: ProductDetailComponent }
+        ])
+    ],
+    declarations: [...DECLARATIONS],
+    providers: [
+        { provide: LocationStrategy, useClass: HashLocationStrategy },
+        ...ONLINE_AUCTION_SERVICES
+    ],
+    bootstrap: [ApplicationComponent]
 })
 export class OnlineAuctionModule {
-  static forRoot(): ModuleWithProviders {
-    return {
-      ngModule: NgModule
+    static forRoot(): ModuleWithProviders {
+        return {
+            ngModule: NgModule
+        }
     }
-  }
 }
