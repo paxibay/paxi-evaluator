@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import { ProductService } from '../../../../services/product-service';
+import { ProductService } from '../../../service-module/product-service';
 
 @Component({
   selector: 'auction-search',

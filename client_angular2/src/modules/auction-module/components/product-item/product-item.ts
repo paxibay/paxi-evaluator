@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
-import { Product } from '../../../../services/product-service';
+import { Product } from '../../../service-module/product-service';
 
 @Component({
   selector: 'auction-product-item',

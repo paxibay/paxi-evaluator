@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable'
-import { Product, ProductService, Location } from '../../../../services/product-service';
+import { Product, ProductService, Location } from '../../../service-module/product-service';
 
 //import 'whatwg-fetch';//let LocationAPI = {
 //  getLocationById() {
