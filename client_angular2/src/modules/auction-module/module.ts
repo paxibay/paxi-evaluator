@@ -1,17 +1,12 @@
-//import { NgModule } from "@angular/core";
-//import { BrowserModule } from "@angular/platform-browser";
-//import { FormsModule } from "@angular/forms";
-
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
-import { AuctionComponent } from "./auction.component";
+import { AuctionComponent } from "./component";
 
-import ApplicationComponent from './components/application/application';
 import CarouselComponent from './components/carousel/carousel';
 import HomeComponent from './components/home/home';
 import FooterComponent from './components/footer/footer';
@@ -24,7 +19,6 @@ import { ONLINE_AUCTION_SERVICES } from '../service-module/services';
 
 export const DECLARATIONS = [
     AuctionComponent,
-    ApplicationComponent,
     CarouselComponent,
     FooterComponent,
     HomeComponent,
