@@ -1,4 +1,4 @@
-import { AuctionComponent } from './component';
+import { AuctionComponent } from './auction.component';
 
 describe('AuctionComponent', () => {
   it('is successfully instantiated', () => {

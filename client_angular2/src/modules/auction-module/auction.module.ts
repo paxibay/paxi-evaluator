@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
-import { AuctionComponent } from "./component";
+import { AuctionComponent } from "./auction.component";
 
 import CarouselComponent from './components/carousel/carousel';
 import HomeComponent from './components/home/home';
