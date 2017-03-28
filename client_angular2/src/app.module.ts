@@ -1,10 +1,10 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { AppComponent } from "./app.component";
-import { AuctionModule } from "./modules/auction-module/auction.module";
+import { ModuleIndex } from "./modules/index";
 
 @NgModule({
-    imports: [BrowserModule, AuctionModule],
+    imports: [BrowserModule, ModuleIndex],
     declarations: [AppComponent],
     bootstrap: [AppComponent]
 })
