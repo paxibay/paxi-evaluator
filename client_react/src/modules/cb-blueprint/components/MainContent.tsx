@@ -15,7 +15,7 @@ interface MainContentProps {
 
 interface MainContentState {
     projectsDetails?: {};
-    searchTerm: string;
+    searchTerm?: string;
 };
 
 class MainContent extends React.Component<MainContentProps, MainContentState> {
@@ -68,12 +68,40 @@ class MainContent extends React.Component<MainContentProps, MainContentState> {
     this.props.deleteProject();
   }
 
+  
+
   renderContent() {
+    
+    //const FieldGroup = ({ id, label, help, ...props }) => {
+    //  return (
+    //    <FormGroup controlId={id}>
+    //      <ControlLabel>{label}</ControlLabel>
+    //      <FormControl {...props} />
+    //      {help && <HelpBlock>{help}</HelpBlock>}
+    //    </FormGroup>
+    //  );
+    //}
 
     const tabs = this.props.projects.map((project, key) => {
       return (
         <Tab eventKey={key} key={key} title={project.title}>
-          {project.title}
+          <form>
+            <FormGroup controlId={project.title}>
+              <ControlLabel>{project.title}</ControlLabel>
+              <FormControl type="text" placeholder="Jane Doe" />
+            </FormGroup>
+
+            <FormGroup controlId={project.title}>
+              <ControlLabel>{project.title}</ControlLabel>
+              <FormControl type="text" placeholder="Jane Doe" />
+            </FormGroup>
+
+            <FormGroup controlId={project.title}>
+              <ControlLabel>{project.title}</ControlLabel>
+              <FormControl type="text" placeholder="Jane Doe" />
+            </FormGroup>
+            
+          </form>
         </Tab>
       )
     });
@@ -97,6 +125,7 @@ class MainContent extends React.Component<MainContentProps, MainContentState> {
           </span>
 
           <br /><br />
+
           <div>
             <form>
               <FormGroup controlId="formBasicText">

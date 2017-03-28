@@ -2,15 +2,25 @@
 
 import { AuctionModule } from "./auction-module/auction.module";
 import { AuctionComponent } from "./auction-module/auction.component";
-
 import { ManagementModule } from "./management-module/management.module";
 import { ManagementComponent } from "./management-module/management.component";
 
 @NgModule({
     imports: [
-        AuctionModule,
+        AuctionModule
+    ],
+    exports: [
+        AuctionComponent
+    ]
+})
+export class AuctionModuleIndex { }
+
+@NgModule({
+    imports: [
         ManagementModule
     ],
-    exports: [AuctionComponent, ManagementComponent]
+    exports: [
+        ManagementComponent
+    ]
 })
-export class ModuleIndex { }
+export class ManagementModuleIndex { }
